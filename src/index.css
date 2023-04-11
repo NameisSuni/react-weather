@@ -22,6 +22,10 @@ body{
 .app.rain {
   background-image: url('./assets/rain-bg.jpg');
 }
+.app.haze {
+  background-image: url('./assets/haze-bg.jpg');
+}
+
 main{
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));

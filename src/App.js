@@ -25,7 +25,7 @@ function App() {
   date = date.slice(0,21);
 
   return (
-    <div className={(typeof weather.main != "undefined")?((weather.main.temp > 16)?((weather.main.temp > 30)?'app rain':'app warm'):'app'):'app'}>
+    <div className={(typeof weather.main != "undefined")?((weather.weather[0].main === "Clear")? 'app warm': (weather.weather[0].main === "Rain")?'app rain':(weather.weather[0].main === "Haze")?'app haze':'app'):'app'}>
       <main>
         <div className="search-box">
           <input type="text" className="search-bar" placeholder="search" onChange={e => setQuery(e.target.value)}
